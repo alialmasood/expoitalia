@@ -6,7 +6,11 @@ import { useEffect, useState } from 'react';
 export default function PaymentErrorPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [errorData, setErrorData] = useState<any>(null);
+  const [errorData, setErrorData] = useState<{
+    error?: string;
+    transactionId?: string;
+    code?: string;
+  } | null>(null);
 
   useEffect(() => {
     const error = searchParams.get('error');

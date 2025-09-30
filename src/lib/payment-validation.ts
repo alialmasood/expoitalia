@@ -54,7 +54,7 @@ export function validateExpiryDate(expiryDate: string): ValidationResult {
   
   const [month, year] = expiryDate.split('/');
   const currentDate = new Date();
-  const currentYear = currentDate.getFullYear() % 100;
+  // const currentYear = currentDate.getFullYear() % 100;
   const currentMonth = currentDate.getMonth() + 1;
   
   const cardYear = parseInt(year) + 2000;

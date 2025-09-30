@@ -6,7 +6,12 @@ import { useEffect, useState } from 'react';
 export default function PaymentSuccessPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [transactionData, setTransactionData] = useState<any>(null);
+  const [transactionData, setTransactionData] = useState<{
+    transactionId?: string;
+    amount?: string;
+    paymentId?: string;
+    status?: string;
+  } | null>(null);
 
   useEffect(() => {
     const transactionId = searchParams.get('transactionId');

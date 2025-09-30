@@ -34,7 +34,7 @@ export default function PaymentCancelPage() {
           <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-6 mb-8">
             <h3 className="text-lg font-semibold text-yellow-800 mb-3">لماذا تم إلغاء الدفع؟</h3>
             <ul className="text-left text-yellow-700 space-y-2">
-              <li>• تم الضغط على زر "إلغاء" أثناء عملية الدفع</li>
+              <li>• تم الضغط على زر &quot;إلغاء&quot; أثناء عملية الدفع</li>
               <li>• تم إغلاق نافذة الدفع قبل إكمال العملية</li>
               <li>• انتهت مهلة انتظار عملية الدفع</li>
             </ul>

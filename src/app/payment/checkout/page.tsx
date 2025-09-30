@@ -102,7 +102,7 @@ export default function CheckoutPage() {
         setError('لم يتم إنشاء رابط الدفع');
       }
 
-    } catch (err) {
+    } catch {
       setError('حدث خطأ في الاتصال بالخادم');
     } finally {
       setLoading(false);

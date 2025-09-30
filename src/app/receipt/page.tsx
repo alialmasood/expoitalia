@@ -8,7 +8,17 @@ export default function ReceiptPage() {
   const { user, loading } = useAuthContext();
   const router = useRouter();
   const searchParams = useSearchParams();
-  const [receiptData, setReceiptData] = useState<any>(null);
+  const [receiptData, setReceiptData] = useState<{
+    transactionId: string;
+    amount: string;
+    currency: string;
+    paymentMethod: string;
+    paymentDate: string;
+    customerName: string;
+    customerEmail: string;
+    service: string;
+    status: string;
+  } | null>(null);
 
   useEffect(() => {
     if (!loading && !user) {
