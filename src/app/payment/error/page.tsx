@@ -8,8 +8,8 @@ export default function PaymentErrorPage() {
   const searchParams = useSearchParams();
   const [errorData, setErrorData] = useState<{
     error?: string;
-    transactionId?: string;
-    code?: string;
+    transactionId?: string | null;
+    code?: string | null;
   } | null>(null);
 
   useEffect(() => {
