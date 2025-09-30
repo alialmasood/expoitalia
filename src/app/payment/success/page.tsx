@@ -7,10 +7,10 @@ export default function PaymentSuccessPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [transactionData, setTransactionData] = useState<{
-    transactionId?: string;
-    amount?: string;
-    paymentId?: string;
-    status?: string;
+    transactionId?: string | null;
+    amount?: string | null;
+    paymentId?: string | null;
+    status?: string | null;
   } | null>(null);
 
   useEffect(() => {
