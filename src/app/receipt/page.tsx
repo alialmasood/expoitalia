@@ -18,6 +18,7 @@ export default function ReceiptPage() {
     customerEmail: string;
     service: string;
     status: string;
+    receiptNumber: string;
   } | null>(null);
 
   useEffect(() => {
