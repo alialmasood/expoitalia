@@ -1,9 +1,9 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 
-export default function PaymentErrorPage() {
+function PaymentErrorContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [errorData, setErrorData] = useState<{
@@ -121,5 +121,20 @@ export default function PaymentErrorPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function PaymentErrorPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-red-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">جاري تحميل صفحة الخطأ...</p>
+        </div>
+      </div>
+    }>
+      <PaymentErrorContent />
+    </Suspense>
   );
 }
